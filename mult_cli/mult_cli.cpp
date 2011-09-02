@@ -9,7 +9,7 @@
 #include "mult_cli.h"
 
 int
-main(int argc, char **argv)
+main(int argc, const char **argv)
 {
 	int					sockfd;
 	struct sockaddr_in	servaddr;

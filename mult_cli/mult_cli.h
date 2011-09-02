@@ -15,8 +15,8 @@
 
 #include "sock.h"
 
-char* DEFAULT_IP = (char*)"127.0.0.1";
-char* DEFAULT_PORT = (char*)"13";
+const char* DEFAULT_IP = "127.0.0.1";
+const char* DEFAULT_PORT = "13";
 const char* QUIT_LINE = "quit\n";
 
 #endif /* TIME_CLIENT_H_ */

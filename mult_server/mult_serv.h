@@ -20,12 +20,17 @@
 #include <syslog.h>
 
 #include <sys/stat.h>
+#include <errno.h>
+
+#include <poll.h>
 
 #include "sock.h"
-#include "log_file.h"
-#include "daemonize.h"
 
-static const int MAX_CONNECTIONS = 128; // number of connections to the server in the same time
-static const int MAX_LOG_LINE = 256;
-//static const char* LOG_PATH = "/var/log/time_server.log";
+const int MAX_CONNECTIONS = 128; // number of connections to the server in the same time
+
+const int MAX_PATH_LENGTH = 256;
+
+const char* DEFAULT_CONF_FILE = "/home/user/.mult_serv.conf";
+const int DEFAULT_LOG_FILE_MAX_SIZE = 1024;
+const int MAX_SERVER_SOCKETS = 128; //max number of sockets, that server will listen in the same time
 #endif /* TIME_SERVER_H_ */
